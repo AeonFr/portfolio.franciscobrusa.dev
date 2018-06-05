@@ -1,0 +1,42 @@
+<template>
+  <main class="container">
+    <h2>Blog</h2>
+    <section v-if="posts.length">
+      
+      <ul>
+        <li v-for="post in posts" :key="post.date">
+          <nuxt-link :to="post._path">
+            {{ post.title }}
+          </nuxt-link>
+        </li>
+      </ul>
+
+    </section>
+    <div v-else>
+      Aún no hay publicaciones en el blog.
+    </div>
+
+    <newsletter></newsletter>
+  </main>
+</template>
+
+<script>
+
+import Newsletter from '../../components/newsletter.vue';
+
+export default {
+  components: { Newsletter },
+  data() {
+    // Using webpacks context to gather all files from a folder
+    const context = require.context('~/content/blog/posts/', false, /\.json$/);
+
+    const posts = context.keys().map(key => ({
+      ...context(key),
+      _path: `/blog/${key.replace('.json', '').replace('./', '')}`
+    }));
+
+    return { posts };
+  }
+};
+</script>
+
