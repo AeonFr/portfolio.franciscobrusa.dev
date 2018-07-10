@@ -60,6 +60,9 @@ import Icons from '../components/icons.vue';
   export default {
     name: 'portfolio',
     components: { Icons },
+    head: {
+      title: 'Portfolio'
+    }
   }
 
 </script>

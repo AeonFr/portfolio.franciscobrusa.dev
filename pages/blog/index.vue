@@ -36,6 +36,9 @@ export default {
     }));
 
     return { posts };
+  },
+  head: {
+    title: 'Blog'
   }
 };
 </script>

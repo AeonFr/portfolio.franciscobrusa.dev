@@ -69,7 +69,7 @@ export default {
     return { posts };
   },
   head: {
-    title: 'Inicio',
+    title: 'Mi sitio web personal',
     meta: [
       { hid: 'og:url', name: 'og:url', content: 'https://www.francisco-cano.com/' },
     ],
