@@ -12,7 +12,7 @@
 
     <p>Sitio web de <em>e-commerce</em> responsivo y optimizado para conecciones lentas. <a href="https://www.bertolinabikes.com.ar/" target="_blank">Link</a></p>
 
-    <img src="~/assets/portfolio/bertolina-mockup.jpg">
+    <!--img src="~/assets/portfolio/bertolina-mockup.jpg">
 
     <p>Tapa de libro, ilustración con xilografía en blanco y negro, posteriormente coloreada de forma digital.</p>
 
@@ -32,7 +32,7 @@
 
     <p>Menú de bar, con ilustraciones. (ad-honorem)</p>
 
-    <img src="~/assets/portfolio/juice-bar.jpg">
+    <img src="~/assets/portfolio/juice-bar.jpg"-->
 
     <p>Collage digital.<br><small>Licencia <a href="https://creativecommons.org/licenses/by/2.0/es/" target="_blank">Creative Commons 2.0</a>.</small></p>
 
@@ -42,11 +42,8 @@
 
     <img src="~/assets/portfolio/blockity-templates.jpg">
 
-    <p><b>Eso es todo.</b></p>
 
-
-
-    <p>También puedes seguirme en Instagram y CodePen para ver creaciones nuevas, o en GitHub para ver el código fuente de algunas de las creaciones de este portfolio (incluido este mismo sitio web).</p>
+    <p><b>Más proyectos</b> en Instagram, CodePen y GitHub.</p>
 
     <icons></icons>
 
