@@ -1,0 +1,3 @@
+/posts/*           /blog/:splat
+/proyectos/*       /blog/:splat
+/*                 /404/index.html 404
