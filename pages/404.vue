@@ -4,3 +4,11 @@
     <p>Lo siento! El link solicitado ya no existe. Puede que la página se haya eliminado.</p>
   </div>
 </template>
+
+<script>
+export default {
+  head: {
+    title: 'Error 404',
+  }
+}
+</script>
