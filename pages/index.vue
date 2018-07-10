@@ -1,11 +1,17 @@
 <template>
   <main class="container">
 
-    <h1>Hola, soy Francisco Cano y hago diseño y desarrollo web.</h1>
+    <h1>Hola, soy Francisco Cano Brusa y soy especialista en el desarrollo web front-end.</h1>
 
     <img src="/img/isometric-city.png">
 
-    <p><b>Bienvenido a mi sitio web.</b> Soy diseñador gráfico y desarrollador web. Aquí expongo mi trabajo (<router-link to="/portfolio/">portfolio</router-link>) y reflexiono sobre mi profesión (<router-link to="/blog/">blog</router-link>). También puedes encontrarme en estos medios:</p>
+    <p><b>Bienvenido.</b></p>
+
+    <p><b>Acerca de mi.</b> Soy desarrollador web especializado en el front-end.</p>
+
+    <p><b>Sobre este sitio.</b> Aquí expongo mi trabajo (<router-link to="/portfolio/">portfolio</router-link>) y reflexiono sobre mi profesión (<router-link to="/blog/">blog</router-link>).</p>
+
+    <p><b>Sígueme en las redes y ponte en contacto!</b> </p>
 
     <icons></icons>
     

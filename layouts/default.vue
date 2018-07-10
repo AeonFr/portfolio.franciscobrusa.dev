@@ -1,47 +1,107 @@
 <template>
   <div>
-    <header class="serif bg-light-gray pa3 fc-serif flex-ns items-center">
+    <header class="serif bg-light-gray pa3 fc-serif flex items-center sticky top-0 shadow-2">
     
       <section class="mr3-ns mr4-l">
-        <a href="/" class="f3 lh-copy link black-80">
-          Francisco Cano
-        </a>
+        <nuxt-link to="/" class="f4 f3-ns b lh-copy link black-80 sans-serif">
+          Francisco Cano Brusa
+        </nuxt-link>
       </section>
-      <nav class="ml-auto flex-grow-1 measure">
-        <ul class="list pa0 mt3 mb0 ma0-ns flex tc">
-          <li class="w-50"><nuxt-link class="link black-80 db hover-blue" to="/">Inicio</nuxt-link></li>
-          <li class="w-50"><nuxt-link class="link black-80 db hover-blue" to="/portfolio/">Portfolio</nuxt-link></li>
+      <nav class="ml-auto flex-grow-1 measure" ref="menu">
+        <ul class="list pa0 mt3 mb0 ma0-l flex-l static-l f5-l tc-l pa0"
+          :class="{
+            'anim-appear-from-left db fixed top-0 right-0 mw-100 bg-light-gray f3 lh-copy z-999 shadow-2 pv2 ph3': isMenuOpen,
+            'dn': !isMenuOpen, 'anim-disappear-from-left': isMenuClosing }">
+          <li class="dn-l black-60 small-caps" aria-role="button" aria-label="Cerrar" tabindex="0"
+              @keypress.enter="setMenuState('start-closing')" @click="setMenuState('start-closing')">
+            <i class="dn-l i-close"></i>
+            Menú
+          </li>
+          <li class="w-33-l"><nuxt-link class="link black-80 db hover-blue" to="/">Inicio</nuxt-link></li>
+          <li class="w-33-l"><nuxt-link class="link black-80 db hover-blue" to="/portfolio/">Portfolio</nuxt-link></li>
+          <li class="w-33-l"><nuxt-link class="link black-80 db hover-blue" to="/blog/">Blog</nuxt-link></li>
         </ul>
+        <div aria-hidden class="ml-auto flex-grow-1 tr dn-l top-2">
+          <i aria-role="button" aria-label="Menú" tabindex="0" class="i-menu f3 black-80 ph2"
+            @keypress.enter="setMenuState('open')" @click="setMenuState('open')"></i>
+        </div>
       </nav>
 
     </header>
-    <nuxt/>
-    <footer class="container">
+    
+    <!-- Main Content -->
+    <main>
+      <nuxt/>
+    </main>
+
+    <footer class="container bg-light-gray pv3">
       <h1 class="f5">Mapa del sitio</h1>
 
       <ul>
         <li><router-link to="/">Inicio</router-link></li>
-        <li><router-link to="/blog">Blog</router-link></li>
         <li><router-link to="/portfolio">Portfolio</router-link></li>
+        <li><router-link to="/blog">Blog</router-link></li>
       </ul>
 
-      <h1 class="f5">Sobre este sitio web</h1>
+      <h1 class="f5">Sobre este sitio</h1>
 
 
-      <p class="f6">Este sitio web fue codificado en Barcelona, España, el 6 de Junio de 2018.
+      <p class="f6">Codificado en Barcelona, España, el 6 de Junio de 2018.
         <br>Todos los derechos reservados.</p>
 
-      <p class="f6">Agradecimientos: <a href="//netlify.com">Netlify</a> por el hosting gratuito y todo lo demás (netlify cms = ♥). <a href="https://nuxtjs.org/">Nuxt.j</a> y <a href="https://tachyons.io/">Tachyons.css</a> porque me ofrecieron una grata experiencia para desarrollar este sitio.</p>
+      <p class="f6"><b>Agradecimientos:</b>&nbsp;<a href="//netlify.com">Netlify</a> por el hosting gratuito. <a href="https://nuxtjs.org/">Nuxt.js</a> y <a href="https://tachyons.io/">Tachyons.css</a> por ayudar en el desarrollo del Front-end.</p>
 
 
-      <p class="f6">El código fuente de este sitio se puede consultar <a href="//github.com/aeonfr/francisco-cano.com">aquí</a>.</p>
+      <p class="f6">El código fuente se puede consultar <a href="//github.com/aeonfr/francisco-cano.com">aquí</a>.</p>
 
 
     </footer>
   </div>
 </template>
 
+<script>
+export default{
+  data(){
+    return {
+      menuState: 'start-close',
+      isMenuClosing: 0,
+    }
+  },
+  methods: {
+    setMenuState (newState) {
+      if (newState == 'start-closing'){
+        this.isMenuClosing = 1;
+        let vm = this;
+        window.setTimeout(function(){
+          vm.isMenuClosing = 0;
+          vm.setMenuState('closed');
+        }, 250);
+      } else this.menuState = newState;
+
+      // Close the menu when clicking outside of the menu
+      if (newState == 'open'){
+        window.addEventListener('click', this.closeMenuWhenClickingOutsideOfMenu)
+      } else {
+        window.removeEventListener('click', this.closeMenuWhenClickingOutsideOfMenu)
+      }
+    },
+    closeMenuWhenClickingOutsideOfMenu(ev){
+      if (!this.$refs.menu.contains(ev.target))
+        this.setMenuState('start-closing');
+    }
+  },
+  computed: {
+    isMenuOpen () {
+      return (this.menuState == 'open' || this.menuState == 'start-closing');
+    }
+  }
+}
+</script>
+
 <style>
+  .sticky{
+    position: sticky;
+  }
   .container{
     max-width: 44rem;
     margin-left: auto;
@@ -49,5 +109,52 @@
     margin-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .i-menu, .i-close{
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+  }
+  .i-menu::before{
+    content: '';
+    display: block;
+    height: 0.1em;
+    width: 0.8em;
+    background-color: currentColor;
+    margin-top: 0.25em;
+    margin-left: 0.1em;
+    box-shadow:
+      0 0.2em currentColor,
+      0 0.4em currentColor;
+  }
+  .i-close::after, .i-close::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0.1em;
+    width: 0.8em;
+    background-color: currentColor;
+    transform: rotate(45deg);
+    margin-top: 0.6em;
+    margin-left: 0.1em;
+  }
+  .i-close::after{
+    transform: rotate(135deg)
+  }
+  .anim-appear-from-left{
+    will-change: transform;
+    animation: appear-from-left .25s ease-in-out;
+  }
+  .anim-disappear-from-left{
+    will-change: transform;
+    animation: disappear-from-left .25s ease-in-out;
+    animation-direction: forwards;
+  }
+  @keyframes appear-from-left{
+    from{ transform: translateX(100%) }
+    to{ transform: translateX(0%) }
+  }
+  @keyframes disappear-from-left{
+    to{ transform: translateX(100%) }
   }
 </style>

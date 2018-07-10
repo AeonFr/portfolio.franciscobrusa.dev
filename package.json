@@ -25,6 +25,7 @@
     "eslint-plugin-vue": "^4.0.0",
     "glob": "^7.1.2",
     "nuxtend": "^0.2.6",
-    "tachyons": "^4.9.1"
+    "tachyons": "^4.9.1",
+    "vue-goodshare": "^0.9.3"
   }
 }
