@@ -39,6 +39,22 @@
 import Icons from '../components/icons.vue';
 import Newsletter from '../components/newsletter.vue';
 
+let jsonLd = {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Francisco Cano Brusa",
+    "url": "https://www.francisco-cano.com",
+    "jobTitle": "Front-end developer",
+    "alumniOf": "Universidad Provincial de Córdoba",
+    "gender": "male",
+    "sameAs": [
+        "https://github.com/aeonfr",
+        "https://instagram.com/franciscocanobrusa",
+        "https://www.linkedin.com/in/francisco-cano-brusa/",
+        "https://codepen.io/frankno/"
+    ]
+};
+
 export default {
   components: { Icons, Newsletter },
   data() {
@@ -56,6 +72,14 @@ export default {
     title: 'Inicio',
     meta: [
       { hid: 'og:url', name: 'og:url', content: 'https://www.francisco-cano.com/' },
+    ],
+    __dangerouslyDisableSanitizers: ['script'],
+    script: [
+      {
+        hid: 'jsonLd',
+        innerHTML: JSON.stringify(jsonLd),
+        type: 'application/ld+json',
+      }
     ]
   }
 };
