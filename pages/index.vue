@@ -76,6 +76,12 @@ export default {
     __dangerouslyDisableSanitizers: ['script'],
     script: [
       {
+        hid: "netlifyIdentity",
+        type: "text/javascript",
+        src: "https://identity.netlify.com/v1/netlify-identity-widget.js"
+      },
+      //https://identity.netlify.com/v1/netlify-identity-widget.js
+      {
         hid: 'jsonLd',
         innerHTML: JSON.stringify(jsonLd),
         type: 'application/ld+json',
