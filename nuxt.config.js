@@ -19,8 +19,8 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Hago diseño y desarrollo web. Este es m sitio web personal.' },
-      { hid: 'og:description', name: 'og:description', content: 'Visitá mi blog y portfolio! :)' },
+      { hid: 'description', name: 'description', content: 'Mi sitio web personal. Blog sobre diseño. Portfolio.' },
+      { hid: 'og:description', name: 'og:description', content: 'Sitio web personal. Blog sobre diseño. Portfolio.' },
       { hid: 'og:locale', name: 'og:locale', content: 'es_LA' },
       { hid: 'og:type', name: 'og:type', content: 'website' },
       { hid: 'og:url', name: 'og:url', content: 'https://www.francisco-cano.com/' },
