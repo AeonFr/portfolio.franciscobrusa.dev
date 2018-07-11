@@ -7,8 +7,15 @@
           Francisco Cano Brusa
         </nuxt-link>
       </section>
-      <nav class="ml-auto flex-grow-1 measure" ref="menu">
-        <ul class="list pa0 mt3 mb0 ma0-l flex-l static-l f5-l tc-l pa0"
+      <nav role="navigation" class="ml-auto flex-grow-1 measure" ref="menu">
+        <div  class="ml-auto flex-grow-1 tr dn-l top-2">
+          <i class="i-menu f3 black-80 ph2" tabindex="0"
+            aria-role="button" :aria-expanded="(isMenuOpen) ? 'true' : 'false'" aria-controls="menuAriaReference"
+            @keypress.enter="setMenuState('open')" @click="setMenuState('open')">
+            <span class="o-0 f6 absolute">Menu</span>
+          </i>
+        </div>
+        <ul id="menuAriaReference" class="list pa0 mt3 mb0 ma0-l flex-l static-l f5-l tc-l pa0"
           :class="{
             'anim-appear-from-left db fixed top-0 right-0 mw-100 bg-light-gray f3 lh-copy z-999 shadow-2 pv2 ph3': isMenuOpen,
             'dn': !isMenuOpen, 'anim-disappear-from-left': isMenuClosing }">
@@ -21,10 +28,6 @@
           <li class="w-33-l"><nuxt-link class="link black-80 db hover-blue" to="/portfolio/">Portfolio</nuxt-link></li>
           <li class="w-33-l"><nuxt-link class="link black-80 db hover-blue" to="/blog/">Blog</nuxt-link></li>
         </ul>
-        <div aria-hidden class="ml-auto flex-grow-1 tr dn-l top-2">
-          <i aria-role="button" aria-label="Menú" tabindex="0" class="i-menu f3 black-80 ph2"
-            @keypress.enter="setMenuState('open')" @click="setMenuState('open')"></i>
-        </div>
       </nav>
 
     </header>
