@@ -28,7 +28,7 @@ export default {
 
     const posts = context.keys().map(key => ({
       ...context(key),
-      _path: `/blog/${key.replace('.json', '').replace('./', '')}`
+      _path: `/blog/tuts/${key.replace('.json', '').replace('./', '')}`
     }));
 
     return { posts };
