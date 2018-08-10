@@ -43,7 +43,12 @@
       <ul>
         <li><router-link to="/">Inicio</router-link></li>
         <li><router-link to="/portfolio">Portfolio</router-link></li>
-        <li><router-link to="/blog">Blog</router-link></li>
+        <li>
+          <router-link to="/blog">Blog</router-link>
+          <ul>
+            <nuxt-link to="/blog/tuts/">Tutoriales</nuxt-link>
+          </ul>  
+        </li>
       </ul>
 
       <h1 class="f5">Sobre este sitio</h1>
@@ -102,6 +107,10 @@ export default{
 </script>
 
 <style>
+  li:not(:nth-child(2)) .nuxt-link-active,
+  .nuxt-link-exact-active{
+    font-weight: 900;
+  }
   .sticky{
     position: sticky;
   }

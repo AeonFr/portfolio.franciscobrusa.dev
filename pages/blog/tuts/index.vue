@@ -1,6 +1,7 @@
 <template>
   <main class="container">
-    <h2>Blog</h2>
+    <h2>Tutoriales</h2>
+
     <section v-if="posts.length">
       
       <ul>
@@ -11,29 +12,19 @@
         </li>
       </ul>
 
-      También hay otras categorías en el blog:
-      <ul>
-        <li><router-link to="/blog/tuts">Tutoriales (listado)</router-link></li>
-      </ul>
-
     </section>
     <div v-else>
-      Aún no hay publicaciones en el blog.
+      Aún no hay publicaciones en esta sección.
     </div>
-
-    <newsletter></newsletter>
   </main>
 </template>
 
 <script>
 
-import Newsletter from '../../components/newsletter.vue';
-
 export default {
-  components: { Newsletter },
   data() {
     // Using webpacks context to gather all files from a folder
-    const context = require.context('~/content/blog/posts/', false, /\.json$/);
+    const context = require.context('~/content/blog/tuts/', false, /\.json$/);
 
     const posts = context.keys().map(key => ({
       ...context(key),
@@ -43,7 +34,7 @@ export default {
     return { posts };
   },
   head: {
-    title: 'Blog'
+    title: 'Tutoriales'
   }
 };
 </script>
