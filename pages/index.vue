@@ -1,21 +1,23 @@
 <template>
   <main class="container">
 
-    <h1>Hola, soy Francisco Cano Brusa y soy especialista en el desarrollo web front-end.</h1>
+    <h1>Hola, soy Francisco Cano Brusa; diseñador y desarrollador web <em class="nowrap">front-end</em> & <em class="nowrap">back-end</em>.</h1>
 
     <img src="/img/isometric-city.png">
 
     <p><b>Bienvenido.</b></p>
 
-    <p><b>Acerca de mi.</b> Soy desarrollador web especializado en el front-end.</p>
+    <p>Soy desarrollador web especializado en el <em>front-end</em>, y diseñador gráfico.</p>
 
-    <p><b>Sobre este sitio.</b> Aquí expongo mi trabajo (<router-link to="/portfolio/">portfolio</router-link>) y reflexiono sobre mi profesión (<router-link to="/blog/">blog</router-link>).</p>
+    <p>En este sitio expongo mi trabajo (<router-link to="/portfolio/">portfolio</router-link>) y reflexiono sobre el diseño de UX, Accesibilidad y otras áreas (<router-link to="/blog/">blog</router-link>). También puedes encontrar <router-link to="/blog/tutoriales/">tutoriales</router-link>.</p>
 
-    <p><b>Sígueme en las redes y ponte en contacto!</b> </p>
+    <p><b>También me puedes encontrar en...</b></p>
 
     <icons></icons>
     
     <p>O puedes escribir a <a href="mailto:francanobr@outlook.es">francanobr@outlook.es</a>.</p>
+
+    <hr>
 
     <section v-if="posts.length">
       

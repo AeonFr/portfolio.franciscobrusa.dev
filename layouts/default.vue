@@ -56,10 +56,6 @@
 
       <p class="f6">Codificado en Barcelona, España, el 6 de Junio de 2018.
         <br>Todos los derechos reservados.</p>
-
-      <p class="f6"><b>Agradecimientos:</b>&nbsp;<a href="//netlify.com">Netlify</a> por el hosting gratuito. <a href="https://nuxtjs.org/">Nuxt.js</a> y <a href="https://tachyons.io/">Tachyons.css</a> por ayudar en el desarrollo del Front-end.</p>
-
-
       <p class="f6">El código fuente se puede consultar <a href="//github.com/aeonfr/francisco-cano.com">aquí</a>.</p>
 
 
