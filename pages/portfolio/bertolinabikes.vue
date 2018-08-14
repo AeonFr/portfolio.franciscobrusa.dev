@@ -20,8 +20,8 @@
     
     <negate-container>
       <div class="flex-ns tc items-start flex-wrap justify-center">
-        <img class="w-75-l" src="~/assets/portfolio/bertolina-mockup.png">
         <img class="w-25-l" src="~/assets/portfolio/logo-animado.gif">
+        <img class="w-75-l" src="~/assets/portfolio/bertolina-mockup.png">
       </div>
     </negate-container>
 
