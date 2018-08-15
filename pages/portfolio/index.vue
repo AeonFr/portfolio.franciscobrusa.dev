@@ -10,6 +10,10 @@
       <img src="~/assets/portfolio/storekey.jpg">
     </negate-container>
 
+    <router-link to="/portfolio/storekey" class="dib ph3 pv1 bg-blue br-pill mb6 white small-caps link f3" style="margin-top:-3rem">más información</router-link>
+
+
+
     <li>
       Logotipo, identidad corporativa y sitio web para bicicletería, con 3K visitas mensuales en menos de seis meses desde su lanzamiento. <router-link to="/portfolio/bertolinabikes" class="nowrap">más información</router-link>
     </li>
@@ -18,15 +22,17 @@
       <img src="~/assets/portfolio/bertolina-mockup-2.jpg">
     </negate-container>
 
+    <router-link to="/portfolio/bertolina" class="dib ph3 pv1 bg-blue br-pill mt2 mb6 white small-caps link f3">más información</router-link>
+
     <li>Sitio web para consultora de arquitectura sustentable, desarrollado inicialmente como tema de WordPress ("desde cero"). <a href="https://guiasarq.netlify.com/" target="_blank">Visitar el sitio</a></li>
 
-    <negate-container>
+    <negate-container class="mb6">
       <img src="~/assets/portfolio/guiasarq-mockup.jpg">
     </negate-container>
 
     <li>Temas para <a href="//blockity.co" target="_blank">blockity</a>, aplicación web para la creación de sitios web.</li>
 
-    <negate-container>
+    <negate-container class="mb6">
       <img src="~/assets/portfolio/blockity-templates.jpg">
     </negate-container>
 
