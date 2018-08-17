@@ -22,7 +22,7 @@
       <img src="~/assets/portfolio/bertolina-mockup-2.jpg">
     </negate-container>
 
-    <router-link to="/portfolio/bertolina" class="dib ph3 pv1 bg-blue br-pill mt2 mb6 white small-caps link f3">más información</router-link>
+    <router-link to="/portfolio/bertolinabikes" class="dib ph3 pv1 bg-blue br-pill mt2 mb6 white small-caps link f3">más información</router-link>
 
     <li>Sitio web para consultora de arquitectura sustentable, desarrollado inicialmente como tema de WordPress ("desde cero"). <a href="https://guiasarq.netlify.com/" target="_blank">Visitar el sitio</a></li>
 
