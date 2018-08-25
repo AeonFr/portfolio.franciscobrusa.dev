@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="serif bg-light-gray pa3 fc-serif flex items-center sticky top-0 shadow-2">
+    <header class="serif bg-light-gray pa3 fc-serif flex items-center sticky top-0 shadow-2 z-999">
     
       <section class="mr3-ns mr4-l">
         <nuxt-link to="/" class="f4 f3-ns b lh-copy link black-80 sans-serif">
@@ -45,9 +45,6 @@
         <li><router-link to="/portfolio">Portfolio</router-link></li>
         <li>
           <router-link to="/blog">Blog</router-link>
-          <ul>
-            <nuxt-link to="/blog/tuts/">Tutoriales</nuxt-link>
-          </ul>  
         </li>
       </ul>
 

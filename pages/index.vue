@@ -1,13 +1,13 @@
 <template>
   <main class="container">
 
-    <h1>Hola, soy Francisco Cano Brusa; diseñador y desarrollador web <em class="nowrap">front-end</em> & <em class="nowrap">back-end</em>.</h1>
+    <h1>Hola, soy un desarrollador web viviendo en Barcelona.</h1>
 
     <img src="/img/isometric-city.png">
 
     <p><b>Bienvenido.</b></p>
 
-    <p>Soy desarrollador web especializado en el <em>front-end</em>, y diseñador gráfico.</p>
+    <p>Soy desarrollador web apasionado por la usabilidad y la experiencia de usuario.</p>
 
     <p>En este sitio expongo mi trabajo (<router-link to="/portfolio/">portfolio</router-link>) y reflexiono sobre el diseño de UX, Accesibilidad y otras áreas (<router-link to="/blog/">blog</router-link>). También puedes encontrar <router-link to="/blog/tutoriales/">tutoriales</router-link>.</p>
 
@@ -30,7 +30,7 @@
         </li>
       </ul>
 
-      <newsletter></newsletter>
+      <!--newsletter></newsletter-->
     </section>
 
   </main>
