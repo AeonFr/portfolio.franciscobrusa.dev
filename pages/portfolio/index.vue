@@ -2,16 +2,7 @@
   <main id="portfolio" class="container">
     <h1>Portfolio</h1>
 
-    <li>
-      Aplicación web de gestión de clientes y envío de emails para un pequeño negocio. La App, 100% responsive, fue escrita en Vue.js con back-end en WordPress. <router-link to="/portfolio/storekey" class="nowrap">más información</router-link>
-    </li>
-
-    <negate-container>
-      <img src="~/assets/portfolio/storekey.jpg">
-    </negate-container>
-
-    <router-link to="/portfolio/storekey" class="dib ph3 pv1 bg-blue br-pill mb6 white small-caps link f3" style="margin-top:-3rem">más información</router-link>
-
+    <storekey-jumbotron />
 
 
     <li>
@@ -72,12 +63,13 @@
 <script>
 
 
-import Icons from '../../components/icons.vue';
-import NegateContainer from '../../components/negateContainer.vue';
+import Icons from '~/components/icons.vue';
+import NegateContainer from '~/components/negateContainer.vue';
+import StorekeyJumbotron from '~/components/portfolio/storekey.vue';
 
   export default {
     name: 'portfolio',
-    components: { Icons, NegateContainer },
+    components: { Icons, NegateContainer, StorekeyJumbotron },
     head: {
       title: 'Portfolio'
     }

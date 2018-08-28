@@ -5,18 +5,7 @@
 
 
 
-    <negate-container class="flex-ns items-start ph2 pl5-ns">
-      
-      <div>
-        <h1>Aplicación Web de gestión de clientes</h1>
-        <p>Contabilidad y envío de notificaciones por E-mail y Whatsapp, todo desde esta App creada a medida.</p>
-        <a href="https://storekey-demo.francisco-cano.com/app" target="_blank" rel="nofollow"
-           class="dib f4 link bg-blue br-pill pv2 ph3 white">
-          Demo
-        </a>
-      </div>
-      <img src="~/assets/portfolio/storekey.jpg">
-    </negate-container>
+    <storekey-jumbotron />
 
 
     <ul class="list pa0 f4">
@@ -52,12 +41,11 @@
 
 <script>
 
-  import NegateContainer from '../../components/negateContainer.vue';
-
+  import StorekeyJumbotron from '~/components/portfolio/storekey.vue';
 
   export default {
     name: 'portfolio-storekey',
-    components: { NegateContainer },
+    components: { StorekeyJumbotron },
     head: {
       title: 'Portfolio: Proyecto "storekey"'
     }
