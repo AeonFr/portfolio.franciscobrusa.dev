@@ -1,9 +1,9 @@
 <template>
   <div>
-    <header class="serif bg-light-gray pa3 fc-serif flex items-center fixed w-100 top-0 shadow-2 z-999">
+    <header class="serif bg-light-gray pa3 flex items-center fixed w-100 top-0 shadow-2 z-999 sans-serif">
     
       <section class="mr3-ns mr4-l">
-        <nuxt-link to="/" class="f4 f3-ns b lh-copy link black-80 sans-serif">
+        <nuxt-link to="/" class="f4 f3-ns b lh-copy link black-80">
           Francisco Cano Brusa
         </nuxt-link>
       </section>
@@ -44,12 +44,10 @@
     <footer class="container bg-light-gray pv3">
       <h1 class="f5">Mapa del sitio</h1>
 
-      <ul>
-        <li><router-link to="/">Inicio</router-link></li>
-        <li><router-link to="/portfolio">Portfolio</router-link></li>
-        <li>
-          <router-link to="/blog">Blog</router-link>
-        </li>
+      <ul class="sans-serif">
+        <li><router-link class="link blue" to="/">Inicio</router-link></li>
+        <li><router-link class="link blue" to="/portfolio">Portfolio</router-link></li>
+        <li><router-link class="link blue" to="/blog">Blog</router-link></li>
       </ul>
 
       <h1 class="f5">Sobre este sitio</h1>
@@ -106,7 +104,7 @@ export default{
 <style lang="scss">
   li:not(:nth-child(2)) .nuxt-link-active,
   .nuxt-link-exact-active{
-    font-weight: 900;
+    font-weight: 600;
   }
   .sticky{
     position: sticky;

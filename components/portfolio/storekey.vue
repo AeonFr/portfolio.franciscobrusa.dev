@@ -31,7 +31,7 @@
     components: { NegateContainer },
     data(){
       return{
-        btnClass: 'dib link bg-blue br-pill pv2 ph3 white'
+        btnClass: 'dib link bg-blue br-pill pv2 ph3 white sans-serif tc'
       }
     }
   }

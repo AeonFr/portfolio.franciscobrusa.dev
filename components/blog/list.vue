@@ -3,7 +3,7 @@
   <div>
     <section v-if="posts.length">
       
-      <ul class="list pa0">
+      <ul class="list pa0 sans-serif">
         <li v-for="post in posts" :key="post.date">
           <nuxt-link :to="post._path"
                      class="flex-ns link mv2 pv2 hover-bg-light-gray dark-blue hover-navy">

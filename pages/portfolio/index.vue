@@ -1,27 +1,42 @@
 <template>
-  <main id="portfolio" class="container">
+  <main id="portfolio" class="container" v-once>
     <h1>Portfolio</h1>
 
     <storekey-jumbotron />
 
 
-    <li>
-      Logotipo, identidad corporativa y sitio web para bicicletería, con 3K visitas mensuales en menos de seis meses desde su lanzamiento. <router-link to="/portfolio/bertolinabikes" class="nowrap">más información</router-link>
+    <li class="mt6">
+      Logotipo, identidad corporativa y sitio web para bicicletería,
+      con 3K visitas mensuales en menos de seis meses desde su lanzamiento.
     </li>
     
     <negate-container>
       <img src="~/assets/portfolio/bertolina-mockup-2.jpg">
     </negate-container>
 
-    <router-link to="/portfolio/bertolinabikes" class="dib ph3 pv1 bg-blue br-pill mt2 mb6 white small-caps link f3">más información</router-link>
+    <div class="tc">
+      <router-link to="/portfolio/bertolinabikes" :class="btnClass" class="f4">
+        Más información
+      </router-link>
+    </div>
 
-    <li>Sitio web para consultora de arquitectura sustentable, desarrollado inicialmente como tema de WordPress ("desde cero"). <a href="https://guiasarq.netlify.com/" target="_blank">Visitar el sitio</a></li>
+    <li class="mt6">
+      Sitio web para consultora de arquitectura sustentable,
+      desarrollado inicialmente como tema de WordPress ("desde cero").
+    </li>
 
-    <negate-container class="mb6">
+    <negate-container>
       <img src="~/assets/portfolio/guiasarq-mockup.jpg">
     </negate-container>
 
-    <li>Temas para <a href="//blockity.co" target="_blank">blockity</a>, aplicación web para la creación de sitios web.</li>
+    <div class="tc">
+      <a href="https://guiasarq.netlify.com/" target="_blank" :class="btnClass" class="f4">
+        Visitar el sitio
+      </a>
+    </div>
+
+
+    <li class="mt6">Temas para <a href="//blockity.co" target="_blank">blockity</a>, aplicación web para la creación de sitios web.</li>
 
     <negate-container class="mb6">
       <img src="~/assets/portfolio/blockity-templates.jpg">
@@ -72,6 +87,11 @@ import StorekeyJumbotron from '~/components/portfolio/storekey.vue';
     components: { Icons, NegateContainer, StorekeyJumbotron },
     head: {
       title: 'Portfolio'
+    },
+    data(){
+      return {
+        btnClass: 'dib link bg-blue br-pill pv2 ph3 white sans-serif tc'
+      }
     }
   }
 
