@@ -1,10 +1,6 @@
 <template>
   <main class="container">
 
-    <h1>Hola, soy un desarrollador web viviendo en Barcelona.</h1>
-
-    <img src="/img/isometric-city.png">
-
     <p><b>Bienvenido.</b></p>
 
     <p>Soy desarrollador web apasionado por la usabilidad y la experiencia de usuario.</p>
@@ -19,18 +15,11 @@
 
     <hr>
 
-    <section v-if="posts.length">
+    <section>
       
       <h2>Blog</h2>
-      <ul>
-        <li v-for="post in posts" :key="post.date">
-          <nuxt-link :to="post._path">
-            {{ post.title }}
-          </nuxt-link>
-        </li>
-      </ul>
+      <blog-list />
 
-      <!--newsletter></newsletter-->
     </section>
 
   </main>
@@ -38,8 +27,10 @@
 
 <script>
 
-import Icons from '../components/icons.vue';
-import Newsletter from '../components/newsletter.vue';
+import Icons from '~/components/icons.vue';
+import Newsletter from '~/components/newsletter.vue';
+import BlogList from '~/components/blog/list.vue';
+
 
 let jsonLd = {
     "@context": "http://schema.org",
@@ -58,18 +49,7 @@ let jsonLd = {
 };
 
 export default {
-  components: { Icons, Newsletter },
-  data() {
-    // Using webpacks context to gather all files from a folder
-    const context = require.context('~/content/blog/posts/', false, /\.json$/);
-
-    const posts = context.keys().map(key => ({
-      ...context(key),
-      _path: `/blog/${key.replace('.json', '').replace('./', '')}`
-    }));
-
-    return { posts };
-  },
+  components: { Icons, Newsletter, BlogList },
   head: {
     title: 'Mi sitio web personal',
     meta: [
