@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="serif bg-light-gray pa3 fc-serif flex items-center sticky top-0 shadow-2 z-999">
+    <header class="serif bg-light-gray pa3 fc-serif flex items-center fixed w-100 top-0 shadow-2 z-999">
     
       <section class="mr3-ns mr4-l">
         <nuxt-link to="/" class="f4 f3-ns b lh-copy link black-80 sans-serif">
@@ -9,20 +9,23 @@
       </section>
       <nav role="navigation" class="ml-auto flex-grow-1 measure" ref="menu">
         <div  class="ml-auto flex-grow-1 tr dn-l top-2">
-          <i class="i-menu f3 black-80 ph2" tabindex="0"
-            aria-role="button" :aria-expanded="(isMenuOpen) ? 'true' : 'false'" aria-controls="menuAriaReference"
-            @keypress.enter="setMenuState('open')" @click="setMenuState('open')">
+          <a href="#menuAriaReference" class="i-menu f3 black-80 ph2" tabindex="0"
+            aria-role="button" :aria-expanded="(isMenuOpen) ? 'true' : 'false'"
+            aria-controls="menuAriaReference"
+            @keypress.enter="setMenuState('open')" @click.prevent="setMenuState('open')">
             <span class="o-0 f6 absolute">Menu</span>
-          </i>
+          </a>
         </div>
         <ul id="menuAriaReference" class="list pa0 mt3 mb0 ma0-l flex-l static-l f5-l tc-l pa0"
           :class="{
-            'anim-appear-from-left db fixed top-0 right-0 mw-100 bg-light-gray f3 lh-copy z-999 shadow-2 pv2 ph3': isMenuOpen,
+            'active bg-light-gray f3 shadow-2': isMenuOpen,
             'dn': !isMenuOpen, 'anim-disappear-from-left': isMenuClosing }">
           <li class="dn-l black-60 small-caps" aria-role="button" aria-label="Cerrar" tabindex="0"
               @keypress.enter="setMenuState('start-closing')" @click="setMenuState('start-closing')">
-            <i class="dn-l i-close"></i>
-            Menú
+            <a class="link gray" href="#" @click.prevent>
+              <i class="dn-l i-close"></i>
+              Menú
+            </a>
           </li>
           <li class="w-33-l"><nuxt-link class="link black-80 db hover-blue" to="/">Inicio</nuxt-link></li>
           <li class="w-33-l"><nuxt-link class="link black-80 db hover-blue" to="/portfolio/">Portfolio</nuxt-link></li>
@@ -31,6 +34,7 @@
       </nav>
 
     </header>
+    <div style="height: 4.25rem"></div>
     
     <!-- Main Content -->
     <main>
@@ -99,7 +103,7 @@ export default{
 }
 </script>
 
-<style>
+<style lang="scss">
   li:not(:nth-child(2)) .nuxt-link-active,
   .nuxt-link-exact-active{
     font-weight: 900;
@@ -146,6 +150,34 @@ export default{
   .i-close::after{
     transform: rotate(135deg)
   }
+
+
+  #menuAriaReference:target, #menuAriaReference.active{
+    display: block!important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 100%;
+    line-height: 1.5;
+    z-index: 999;
+    padding: 0 1em;
+    padding-bottom: .5em;
+    background: white;
+    font-size: 1.5em;
+    @extend .anim-appear-from-left;
+  }
+
+  @media (min-width: 30em){
+    #menuAriaReference:target, #menuAriaReference.active{
+      background: transparent;
+      position: static;
+      font-size: 1em;
+      padding-bottom: 0;
+      display: flex!important;
+      box-shadow: none!important;
+    }
+  }
+
   .anim-appear-from-left{
     will-change: transform;
     animation: appear-from-left .25s ease-in-out;
