@@ -1,11 +1,19 @@
 <template>
   <main class="container">
 
-    <p><b>Bienvenido.</b></p>
+    <section class="lh-copy">
 
-    <p>Soy desarrollador web apasionado por la usabilidad y la experiencia de usuario.</p>
+      <p><b>Bienvenido.</b></p>
 
-    <p>En este sitio expongo mi trabajo (<router-link to="/portfolio/">portfolio</router-link>) y reflexiono sobre el diseño de UX, Accesibilidad y otras áreas (<router-link to="/blog/">blog</router-link>). También puedes encontrar <router-link to="/blog/tutoriales/">tutoriales</router-link>.</p>
+      <p>Soy desarrollador web apasionado por la usabilidad y la experiencia de usuario.</p>
+
+      <p>
+        En este sitio expongo mi trabajo (<router-link to="/portfolio/">portfolio</router-link>)
+        y reflexiono sobre el diseño de UX, Accesibilidad y otras áreas
+        (<router-link to="/blog/">blog</router-link>).
+      </p>
+    
+    </section>
 
     <p><b>También me puedes encontrar en...</b></p>
 
