@@ -1,6 +1,7 @@
 <template>
   <div>
-    <header class="serif bg-light-gray pa3 flex items-center fixed w-100 top-0 shadow-2 z-999 sans-serif">
+    <header class="serif pa3 flex items-center fixed w-100 top-0 z-999 sans-serif"
+            style="background-color: rgba(255,255,255,.8)">
     
       <section class="mr3-ns mr4-l">
         <nuxt-link to="/" class="f4 f3-ns b lh-copy link black-80">

@@ -1,11 +1,8 @@
 <template>
-  <main class="container">
+  <main class="container" v-once>
 
     <h1>Proyecto: Bertolina Bikes</h1>
 
-    <negate-container>
-      <img src="~/assets/portfolio/bertolina-mockup-2.jpg">
-    </negate-container>
 
     <p class="f4">Diseño de identidad corporativa y desarrollo de sitio web responsive para bicicletería.</p>
 
@@ -19,6 +16,7 @@
     <p>El resultado de la primera iteración (investigación - creativo - prototipado - testeo) se redactó en forma de libro y se puede <a href="/download/2017-12-09-bertolinabikes-A4-2-bklt.pdf" target="_blank" rel="nofollow">descargar en PDF</a>.</p>
     
     <negate-container>
+      <img src="~/assets/portfolio/bertolina-mockup-2.jpg">
       <div class="flex-ns tc items-start flex-wrap justify-center">
         <img class="w-25-l" src="~/assets/portfolio/logo-animado.gif">
         <img class="w-75-l" src="~/assets/portfolio/bertolina-mockup.png">
