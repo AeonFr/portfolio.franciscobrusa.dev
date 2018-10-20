@@ -1,9 +1,9 @@
 <template>
   <main class="container">
     <h2>Blog</h2>
-    <blog-list :posts="posts" />
+    <blog-list/>
 
-    <newsletter></newsletter>
+    <!-- To do: GDPR newsletter -->
   </main>
 </template>
 
