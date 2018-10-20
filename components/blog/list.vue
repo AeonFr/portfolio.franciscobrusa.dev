@@ -25,7 +25,7 @@
 </template>
 <script>
 
-import { orderBy } from 'lodash';
+import { orderBy, pullAllBy } from 'lodash';
 
 export default {
   name: 'blog-list',
@@ -38,7 +38,7 @@ export default {
       _path: `/blog/${key.replace('.json', '').replace('./', '')}`
     }));
 
-    return { posts: orderBy(posts, 'date').reverse() };
+    return { posts: orderBy(pullAllBy(posts, [{draft: true}], 'draft'), 'date').reverse() };
   },
   methods: {
     prettyDate(d){
