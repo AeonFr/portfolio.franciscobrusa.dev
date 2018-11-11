@@ -19,14 +19,6 @@
       ahorrando tiempo y dinero al generar emails de forma masiva
       y evitar envió de cartas por correo (tradicional).
     </p>
-    <p>
-      Actualmente se está re-escribiendo: el front-end será una <abbr>PWA</abbr>
-      y el <em>back-end</em> funcionará con el <abbr>ORM</abbr> de Laravel.
-      El código se mantiene en
-      <a href="https://github.com/AeonFr/storekeyCRM" target="_blank">
-        este repositorio de GitHub
-      </a>.
-    </p>
 
     <p class="pa2 shadow-2">
       <a href="https://storekey-demo.francisco-cano.com/app" target="_blank" rel="nofollow">Demo</a>
