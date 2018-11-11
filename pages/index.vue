@@ -59,7 +59,7 @@ let jsonLd = {
 export default {
   components: { Icons, Newsletter, BlogList },
   head: {
-    title: 'Mi sitio web personal',
+    title: 'Home',
     meta: [
       { hid: 'og:url', name: 'og:url', content: 'https://www.francisco-cano.com/' },
     ],
