@@ -4,14 +4,34 @@
 
     <storekey-jumbotron />
 
+    <li class="mt6">
+      <a
+        href="https://timekr.netlify.com"
+        target="_blank">
+        Timekr
+      </a>
+      es una aplicación web para medir el tiempo dedicado a distintos proyecto,
+      usando la técnica “Pomodoro”
+      (divide el tiempo en segmentos de 25 minutos,
+      con descansos de 5 a 20 minutos entre medio).
+    </li>
+
+    <negate-container>
+      <img
+        src="~/assets/portfolio/timekr.jpg"
+        alt="Captura de pantalla de Timekr">
+    </negate-container>
+
 
     <li class="mt6">
-      Logotipo, identidad corporativa y sitio web para bicicletería,
-      con 3K visitas mensuales en menos de seis meses desde su lanzamiento.
+      Logotipo, identidad corporativa y sitio web para bicicletería.
+      Registró hasta 7K visitas mensuales. Lanzado en Diciembre del 2017.
     </li>
     
     <negate-container>
-      <img src="~/assets/portfolio/bertolina-mockup-2.jpg">
+      <img
+        src="~/assets/portfolio/bertolina-mockup-2.jpg"
+        alt="Imágen del sitio web para Bertolina Bikes">
     </negate-container>
 
     <div class="tc">
