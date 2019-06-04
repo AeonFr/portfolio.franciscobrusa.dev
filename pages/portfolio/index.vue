@@ -112,6 +112,12 @@ import StorekeyJumbotron from '~/components/portfolio/storekey.vue';
       return {
         btnClass: 'dib link bg-blue br-pill pv2 ph3 white sans-serif tc'
       }
+    },
+    mounted() {
+      document.getElementsByTagName('html').style.backgroundColor = 'white';
+    },
+    destroyed(){
+      document.getElementsByTagName('html').style.backgroundColor = '';
     }
   }
 
