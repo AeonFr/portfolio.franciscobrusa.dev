@@ -23,13 +23,24 @@
       </div>
     </negate-container>
 
-
-    <p class="pa2 shadow-2">
-      <a href="https://www.bertolinabikes.com.ar/" target="_blank" rel="nofollow">Visitar el sitio web</a>
-    
-      <br>
-      <a href="https://gitlab.com/aeonfr/bertolinabikes.com.ar" target="_blank" rel="nofollow">Código fuente en GitLab</a>
-    </p>
+    <div class="ph4 pv1 shadow-2">
+      <p>
+        Desde comienzos del 2019 el sitio web fue migrado a una plataforma de
+        <em class="nowrap">e-commerce</em> latinoamericana.
+      </p>
+      <p>
+        El autor ya no responde por el sitio ubicado en
+        "bertolinabikes.com.ar", por ende se han quitado los links a dicho sitio.
+      </p>
+      <p>
+        Aún así, se ha habilitado
+          <a href="https://bertolinabikes.netlify.com/"
+            target="_blank" rel="nofollow">
+            una vista previa del sitio original
+          </a>
+        que se puede consultar siguiendo el enlace.
+      </p>
+    </div>
 
     <p><router-link to="/portfolio" class="f4 link blue">Volver al Portfolio</router-link></p>
 
