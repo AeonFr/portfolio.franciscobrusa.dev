@@ -6,18 +6,6 @@
       <vue-markdown class="lh-copy" :watches="[]" :breaks="false" :emoji="false" :linkify="false" :anchorAttributes="{ 'target': '_blank' }" :source="post.body">
       </vue-markdown>
     </article>
-    <section class="container bg-black light-blue pv3">
-      
-      <h1 class="f3">Compartir</h1>
-
-      <a class="white" :href=" 'https://www.facebook.com/sharer/sharer.php?u=' + url ">Facebook</a>
-      -
-      <a class="white" :href=" 'https://twitter.com/home?status=' + url ">Twitter</a>
-      -
-      <a class="white" :href=" 'https://www.linkedin.com/shareArticle?mini=true&url=' + url + '&title=&summary=&source=' + url">LinkedIn</a>
-      -
-      <a ref="copyButton" aria-role="button" href="#" @click.prevent="copyUrl" @keypress.enter.prevent="copyUrl" class="white">Copiar <abbr>URL</abbr></a>
-    </section>
   </div>
 </template>
 
