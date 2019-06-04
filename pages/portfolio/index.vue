@@ -114,10 +114,10 @@ import StorekeyJumbotron from '~/components/portfolio/storekey.vue';
       }
     },
     mounted() {
-      document.getElementsByTagName('html').style.backgroundColor = 'white';
+      document.querySelector('html').style.backgroundColor = 'white';
     },
     destroyed(){
-      document.getElementsByTagName('html').style.backgroundColor = '';
+      document.querySelector('html').style.backgroundColor = '';
     }
   }
 
