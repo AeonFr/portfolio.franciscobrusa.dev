@@ -40,6 +40,12 @@
     components: { StorekeyJumbotron },
     head: {
       title: 'Portfolio: Proyecto "storekey"'
+    },
+    mounted() {
+      document.querySelector('html').style.backgroundColor = 'white';
+    },
+    destroyed(){
+      document.querySelector('html').style.backgroundColor = '';
     }
   }
 
