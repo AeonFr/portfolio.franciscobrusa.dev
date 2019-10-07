@@ -2,131 +2,123 @@
   <main id="portfolio" class="container" v-once>
     <h1>Portfolio</h1>
 
-    <storekey-jumbotron />
-
-    <li class="mt6">
-      <a
-        href="https://timekr.netlify.com"
-        target="_blank">
-        Timekr
-      </a>
-      es una aplicación web para medir el tiempo dedicado a distintos proyecto,
-      usando la técnica “Pomodoro”
-      (divide el tiempo en segmentos de 25 minutos,
-      con descansos de 5 a 20 minutos entre medio).
+    <li class="list mt6">
+      <storekey-jumbotron :more="true" />
     </li>
 
-    <negate-container>
-      <img
-        src="~/assets/portfolio/timekr.jpg"
-        alt="Captura de pantalla de Timekr">
-    </negate-container>
-
-
-    <li class="mt6">
-      Logotipo, identidad corporativa y sitio web para bicicletería.
-      Registró hasta 7K visitas mensuales. Lanzado en Diciembre del 2017.
-    </li>
-    
-    <negate-container>
-      <img
-        src="~/assets/portfolio/bertolina-mockup-2.jpg"
-        alt="Imágen del sitio web para Bertolina Bikes">
-    </negate-container>
-
-    <div class="tc">
-      <router-link to="/portfolio/bertolinabikes" :class="btnClass" class="f4">
-        Más información
-      </router-link>
-    </div>
-
-    <li class="mt6">
-      Sitio web para consultora de arquitectura sustentable,
-      desarrollado inicialmente como tema de WordPress ("desde cero").
+    <li class="mt6 list">
+      <timekr />
     </li>
 
-    <negate-container>
-      <img src="~/assets/portfolio/guiasarq-mockup.jpg">
-    </negate-container>
+    <li class="mt6 list">
+      <h1>E-commerce</h1>
 
-    <div class="tc">
-      <a href="https://guiasarq.netlify.com/" target="_blank" :class="btnClass" class="f4">
-        Visitar el sitio
-      </a>
-    </div>
+      <ul class="list">
+        <li>
+          <h2>bertolinabikes</h2>
+          <negate-container>
+            <div class="mh3 mw7 center">
+              <p>Logotipo, identidad corporativa y sitio web para bicicletería.</p>
+            </div>
+            <div class="tc">
+              <router-link
+                to="/portfolio/bertolinabikes"
+                :class="btnClass"
+                class="f4"
+              >Más información</router-link>
+            </div>
+            <img
+              src="~/assets/portfolio/bertolina-mockup-2.jpg"
+              alt="Imágen del sitio web para Bertolina Bikes"
+            />
+          </negate-container>
+        </li>
+        <li class="mt6">
+          <h2>guiasarq</h2>
 
+          <p>
+            Sitio web para consultora de arquitectura sustentable,
+            desarrollado inicialmente como tema de WordPress ("desde cero").
+          </p>
+          <div class="tc">
+            <a
+              href="https://guiasarq.netlify.com/"
+              target="_blank"
+              :class="btnClass"
+              class="f4"
+            >Visitar el sitio</a>
+          </div>
+          <negate-container>
+            <img src="~/assets/portfolio/guiasarq-mockup.jpg" />
+          </negate-container>
+        </li>
+      </ul>
+    </li>
 
-    <li class="mt6">Temas para <a href="//blockity.co" target="_blank">blockity</a>, aplicación web para la creación de sitios web.</li>
+    <li class="mt6 list">
+      <h2 class="mt4">Otros trabajos de diseño gráfico e ilustración</h2>
+      <p class="f6 italic">
+        Estos trabajos fueron realizados
+        <em>ad-honorem</em> durante mi cursado en la universidad.
+      </p>
+      <ul>
+        <li class="mt-4">
+          Tapa de libro, ilustración xilográfica en blanco y negro, posteriormente coloreada de forma digital.
+          <img
+            src="~/assets/portfolio/tapa-libro-redhondinho.jpg"
+          />
+        </li>
+      </ul>
+    </li>
 
-    <negate-container class="mb6">
-      <img src="~/assets/portfolio/blockity-templates.jpg">
-    </negate-container>
+    <li>
+      Flyer para Juice Bar.
+      <img src="~/assets/portfolio/folleto-juice-bar.png" />
+    </li>
 
-    <h2 class="mt4">Otros trabajos de diseño gráfico e ilustración</h2>
-    <p class="f6">Estos trabajos fueron realizados <em>ad-honorem</em> durante mi cursado en la universidad.</p>
-
-    <div class="mt4"></div>
-
-    <li>Tapa de libro, ilustración xilográfica en blanco y negro, posteriormente coloreada de forma digital.</li>
-
-    <img src="~/assets/portfolio/tapa-libro-redhondinho.jpg">
-
-    <li>Ilustración digital.<br><small>Bob Dylan en dos etapas distintas de su carrera, representado a través de sus frases.</small></li>
-
-    <img src="~/assets/portfolio/dos-ilustraciones.jpg">
-
-    <li>Flyer para Juice Bar (Córdoba).</li>
-    
-    <img src="~/assets/portfolio/folleto-juice-bar.png">
-
-    <li>Menú de bar, con ilustraciones.</li>
-
-    <img src="~/assets/portfolio/juice-bar.jpg">
-
-
-
-    <h2 class="mt4">Más...</h2>
-    <p>...en Instagram, CodePen y GitHub.</p>
-
-    <icons></icons>
-
-    <p><router-link to="/" class="f4 link blue">Volver al inicio</router-link></p>
-
+    <li>
+      Menú de bar, con ilustraciones.
+      <img src="~/assets/portfolio/juice-bar.jpg" />
+    </li>
+    <p>
+      <router-link to="/" class="f4 link blue">Volver al inicio</router-link>
+    </p>
   </main>
 </template>
 
 <script>
+import Icons from "~/components/icons.vue";
+import NegateContainer from "~/components/negateContainer.vue";
+import StorekeyJumbotron from "~/components/portfolio/storekey.vue";
+import Timekr from "~/pages/portfolio/timekr.vue";
 
-
-import Icons from '~/components/icons.vue';
-import NegateContainer from '~/components/negateContainer.vue';
-import StorekeyJumbotron from '~/components/portfolio/storekey.vue';
-
-  export default {
-    name: 'portfolio',
-    components: { Icons, NegateContainer, StorekeyJumbotron },
-    head: {
-      title: 'Portfolio'
-    },
-    data(){
-      return {
-        btnClass: 'dib link bg-blue br-pill pv2 ph3 white sans-serif tc'
-      }
-    },
-    mounted() {
-      document.querySelector('html').style.backgroundColor = 'white';
-    },
-    destroyed(){
-      document.querySelector('html').style.backgroundColor = '';
-    }
+export default {
+  name: "portfolio",
+  components: { Icons, NegateContainer, StorekeyJumbotron, Timekr },
+  head: {
+    title: "Portfolio"
+  },
+  data() {
+    return {
+      btnClass: "dib link bg-blue br-pill pv2 ph3 white sans-serif tc"
+    };
+  },
+  mounted() {
+    document.querySelector("html").style.backgroundColor = "white";
+  },
+  destroyed() {
+    document.querySelector("html").style.backgroundColor = "";
   }
-
+};
 </script>
 
 <style type="text/css">
-  #portfolio img{ display: block; margin: 1rem auto; }
-  a[target="_blank"]:after {
-    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
-    margin: 0 3px 0 5px;
-  }
+#portfolio img {
+  display: block;
+  margin: 1rem auto;
+}
+a[target="_blank"]:after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 3px 0 5px;
+}
 </style>

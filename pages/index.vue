@@ -5,21 +5,20 @@
 
       <p><b>Bienvenido.</b></p>
 
-      <p>Soy desarrollador web apasionado por la usabilidad y la experiencia de usuario.</p>
+      <p>Soy un desarrollador web apasionado por la usabilidad y la experiencia de usuario.</p>
 
       <p>
-        En este sitio expongo mi trabajo (<router-link to="/portfolio/">portfolio</router-link>)
-        y reflexiono sobre el diseño de UX, Accesibilidad y otras áreas
+        En este sitio puedes ver algunos de mis trabajos
+        (<router-link to="/portfolio/">portfolio</router-link>)
+        y reflexiones esporádicas sobre el oficio
         (<router-link to="/blog/">blog</router-link>).
       </p>
     
     </section>
 
-    <p><b>También me puedes encontrar en...</b></p>
+    <p><b>Encuéntrame en…</b></p>
 
     <icons></icons>
-    
-    <p>O puedes escribir a <a href="mailto:francanobr@outlook.es">francanobr@outlook.es</a>.</p>
 
     <hr>
 

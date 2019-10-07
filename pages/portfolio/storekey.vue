@@ -2,9 +2,6 @@
   <main class="container">
 
 
-
-
-
     <storekey-jumbotron />
 
 
