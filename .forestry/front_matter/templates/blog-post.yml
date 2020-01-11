@@ -1,0 +1,16 @@
+---
+label: Blog post
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: boolean
+  name: draft
+  label: draft
+- type: datetime
+  name: date
+  label: date
+- type: textarea
+  name: body
+  label: body
