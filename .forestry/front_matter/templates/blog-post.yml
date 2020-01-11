@@ -8,9 +8,16 @@ fields:
 - type: boolean
   name: draft
   label: draft
+  default: true
 - type: datetime
   name: date
   label: date
+  default: now
 - type: textarea
   name: body
   label: body
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+    required: true
