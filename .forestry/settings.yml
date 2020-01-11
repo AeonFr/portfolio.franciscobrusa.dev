@@ -8,8 +8,8 @@ sections:
   path: content/blog/posts
   label: Blog
   create: documents
-  match: "**/*"
-  new_doc_ext: ".json"
+  match: "*"
+  new_doc_ext: json
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
