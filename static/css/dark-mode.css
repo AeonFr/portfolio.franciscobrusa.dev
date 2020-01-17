@@ -1,153 +1,173 @@
+:root {
+  --bgColor: rgb(0, 24, 31);
+  --foregroundColorRGB: 255, 255, 255;
+  /*--mainColorRGB: */
+}
+
+.white-mode {
+  --bgColor: white;
+  --foregroundColorRGB: 0, 0, 0;
+}
+
 body {
-  background-color: rgba(0, 0, 0, 0.9);
-  color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(0, 24, 31);
+  background-color: var(--bgColor);
+  color: white;
+  color: rgba(var(--foregroundColorRGB), 0.9);
 }
 
 h1,
 h2,
 h3 {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(var(--foregroundColorRGB), 1);
 }
 
+body,
+h1,
+h2,
+h3,
+[class^="inverted-"],
+[class^="^bg-"] {
+  transition: background-color 1s, color 1s;
+}
 /**
 * Text and bg utilities that are based on the contrast with the background,
 * using white on black and black on white
 */
 .inverted-100 {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(var(--foregroundColorRGB), 1);
 }
 .inverted-90 {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(var(--foregroundColorRGB), 0.9);
 }
 .inverted-80 {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(var(--foregroundColorRGB), 0.8);
 }
 .inverted-70 {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(var(--foregroundColorRGB), 0.7);
 }
 .inverted-60 {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--foregroundColorRGB), 0.6);
 }
 .inverted-50 {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--foregroundColorRGB), 0.5);
 }
 .inverted-40 {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(var(--foregroundColorRGB), 0.4);
 }
 .inverted-30 {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(var(--foregroundColorRGB), 0.3);
 }
 .inverted-20 {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(var(--foregroundColorRGB), 0.2);
 }
 .inverted-10 {
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(var(--foregroundColorRGB), 0.1);
 }
 
 .bg-inverted-100 {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(var(--foregroundColorRGB), 1);
 }
 .bg-inverted-90 {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(var(--foregroundColorRGB), 0.9);
 }
 .bg-inverted-80 {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(var(--foregroundColorRGB), 0.8);
 }
 .bg-inverted-70 {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(var(--foregroundColorRGB), 0.7);
 }
 .bg-inverted-60 {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(var(--foregroundColorRGB), 0.6);
 }
 .bg-inverted-50 {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(var(--foregroundColorRGB), 0.5);
 }
 .bg-inverted-40 {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(var(--foregroundColorRGB), 0.4);
 }
 .bg-inverted-30 {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(var(--foregroundColorRGB), 0.3);
 }
 .bg-inverted-20 {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(var(--foregroundColorRGB), 0.2);
 }
 .bg-inverted-10 {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(var(--foregroundColorRGB), 0.1);
 }
 
-/** The main color */
 .main {
-  color: #ff4136;
+  color: var(--main);
 }
 .bg-main {
-  background-color: #ff4136;
+  background-color: var(--main);
 }
 
 .hover-inverted-100:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(var(--foregroundColorRGB), 1);
 }
 .hover-inverted-90:hover {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(var(--foregroundColorRGB), 0.9);
 }
 .hover-inverted-80:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(var(--foregroundColorRGB), 0.8);
 }
 .hover-inverted-70:hover {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(var(--foregroundColorRGB), 0.7);
 }
 .hover-inverted-60:hover {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--foregroundColorRGB), 0.6);
 }
 .hover-inverted-50:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--foregroundColorRGB), 0.5);
 }
 .hover-inverted-40:hover {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(var(--foregroundColorRGB), 0.4);
 }
 .hover-inverted-30:hover {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(var(--foregroundColorRGB), 0.3);
 }
 .hover-inverted-20:hover {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(var(--foregroundColorRGB), 0.2);
 }
 .hover-inverted-10:hover {
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(var(--foregroundColorRGB), 0.1);
 }
 
 .hover-bg-inverted-100:hover {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(var(--foregroundColorRGB), 1);
 }
 .hover-bg-inverted-90:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(var(--foregroundColorRGB), 0.9);
 }
 .hover-bg-inverted-80:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(var(--foregroundColorRGB), 0.8);
 }
 .hover-bg-inverted-70:hover {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(var(--foregroundColorRGB), 0.7);
 }
 .hover-bg-inverted-60:hover {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(var(--foregroundColorRGB), 0.6);
 }
 .hover-bg-inverted-50:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(var(--foregroundColorRGB), 0.5);
 }
 .hover-bg-inverted-40:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(var(--foregroundColorRGB), 0.4);
 }
 .hover-bg-inverted-30:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(var(--foregroundColorRGB), 0.3);
 }
 .hover-bg-inverted-20:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(var(--foregroundColorRGB), 0.2);
 }
 .hover-bg-inverted-10:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(var(--foregroundColorRGB), 0.1);
 }
 
 .hover-main:hover {
-  color: #ff4136;
+  color: var(--main);
 }
 .hover-bg-main:hover {
-  background-color: #ff4136;
+  background-color: var(--main);
 }

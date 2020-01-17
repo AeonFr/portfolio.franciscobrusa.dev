@@ -22,7 +22,7 @@
             value
             placeholder="tu@email.com"
             name="EMAIL"
-            class="required email input-reset bg-white ba b--light-gray pv1 ph2 serif db"
+            class="required email input-reset bg-white ba b--light-gray pv1 ph2 db"
             id="mce-EMAIL"
             style="max-width:calc(100% - 8rem)"
             required

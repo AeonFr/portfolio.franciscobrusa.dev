@@ -2,16 +2,23 @@ html {
   font-size: 18px;
 }
 
-.serif {
-  font-family: "Merriweather", "Baskerville", "Libre Baskerville", sans-serif;
+:root {
+  /** The main color */
+  --main: #19a974;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
 }
 
 html,
-h1,
-h2,
-h3,
 .sans-serif {
-  font-family: "Archivo", sans-serif;
+  font-family: "Archivo", -apple-system, BlinkMacSystemFont, "avenir next",
+    avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial,
+    sans-serif;
 }
 
 article .lh-copy {
@@ -21,15 +28,35 @@ article .lh-copy {
 article a,
 article a:visited {
   text-decoration: none;
-  color: #ff4136;
+  color: var(--main);
 }
 
-article code,
 article pre {
-  color: rgba(255, 255, 255, 0.7);
+  width: 100%;
 }
 
 article code {
   display: inline-block;
-  border: 1px solid #ff4136;
+  border: 1px solid var(--main);
+  border-radius: 0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  background-color: rgba(var(--foregroundColorRGB), 0.1);
+  line-height: 1.4;
+  font-family: "Courier Next", courier, monospace;
+}
+
+article pre > code {
+  display: block;
+  overflow-x: auto;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  background: linear-gradient(
+    to right,
+    rgba(var(--foregroundColorRGB), 0.1),
+    rgba(var(--foregroundColorRGB), 0.05)
+  );
+  line-height: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
