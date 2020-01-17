@@ -28,7 +28,7 @@ export default {
   components: { NegateContainer },
   data() {
     return {
-      btnClass: "dib link bg-blue br-pill pv2 ph3 white sans-serif tc"
+      btnClass: "dib link bg-dark-red br-pill pv2 ph3 white sans-serif tc"
     };
   }
 };

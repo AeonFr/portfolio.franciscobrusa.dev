@@ -1,0 +1,35 @@
+html {
+  font-size: 18px;
+}
+
+.serif {
+  font-family: "Merriweather", "Baskerville", "Libre Baskerville", sans-serif;
+}
+
+html,
+h1,
+h2,
+h3,
+.sans-serif {
+  font-family: "Archivo", sans-serif;
+}
+
+article .lh-copy {
+  line-height: 1.8;
+}
+
+article a,
+article a:visited {
+  text-decoration: none;
+  color: #ff4136;
+}
+
+article code,
+article pre {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+article code {
+  display: inline-block;
+  border: 1px solid #ff4136;
+}

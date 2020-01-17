@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html {{ HTML_ATTRS }}>
+  <head>
+    {{ HEAD }}
+    <link rel="stylesheet" type="text/css" href="/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="/css/tachyons.css" />
+    <link rel="stylesheet" type="text/css" href="/css/dark-mode.css" />
 
-<head>
-  {{ HEAD }}
-  <link rel="stylesheet" type="text/css" href="/css/tachyons.css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Archivo:700|Merriweather&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo:700|Merriweather&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <style type="text/css">
-    html {
-      font-size: 18px;
-      color: rgba( 0, 0, 0, .8 );
+  <body {{ BODY_ATTRS }}>
+    {{ APP }}
+  </body>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
     }
-    html, .serif{ font-family: 'Merriweather', 'Baskerville', 'Libre Baskerville', sans-serif; }
-    h1, h2, h3, .sans-serif{ font-family: 'Archivo', sans-serif; }
-  </style>
-</head>
-
-<body {{ BODY_ATTRS }}>
-  {{ APP }}
-</body>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-
+  </script>
 </html>

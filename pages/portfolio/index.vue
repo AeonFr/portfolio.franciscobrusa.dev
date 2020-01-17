@@ -81,7 +81,7 @@
       <img src="~/assets/portfolio/juice-bar.jpg" />
     </li>
     <p>
-      <router-link to="/" class="f4 link blue">Volver al inicio</router-link>
+      <router-link to="/" class="f4 link dark-red">Volver al inicio</router-link>
     </p>
   </main>
 </template>
@@ -100,7 +100,7 @@ export default {
   },
   data() {
     return {
-      btnClass: "dib link bg-blue br-pill pv2 ph3 white sans-serif tc"
+      btnClass: "dib link bg-dark-red br-pill pv2 ph3 white sans-serif tc"
     };
   },
   mounted() {
