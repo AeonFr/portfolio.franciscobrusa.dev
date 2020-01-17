@@ -13,20 +13,16 @@
     <li class="mt6 list">
       <h1>E-commerce</h1>
 
-      <ul class="list">
+      <ul class="list pa0">
         <li>
-          <h2>bertolinabikes</h2>
+          <h2>Bertolina Bikes</h2>
+          <div class="mh3 mw7 center">
+            <p>Logotipo, identidad corporativa y sitio web para bicicletería.</p>
+          </div>
+          <div>
+            <router-link to="/portfolio/bertolinabikes" :class="btnClass" class="f4">Más información</router-link>
+          </div>
           <negate-container>
-            <div class="mh3 mw7 center">
-              <p>Logotipo, identidad corporativa y sitio web para bicicletería.</p>
-            </div>
-            <div class="tc">
-              <router-link
-                to="/portfolio/bertolinabikes"
-                :class="btnClass"
-                class="f4"
-              >Más información</router-link>
-            </div>
             <img
               src="~/assets/portfolio/bertolina-mockup-2.jpg"
               alt="Imágen del sitio web para Bertolina Bikes"
@@ -40,7 +36,7 @@
             Sitio web para consultora de arquitectura sustentable,
             desarrollado inicialmente como tema de WordPress ("desde cero").
           </p>
-          <div class="tc">
+          <div>
             <a
               href="https://guiasarq.netlify.com/"
               target="_blank"
@@ -61,28 +57,24 @@
         Estos trabajos fueron realizados
         <em>ad-honorem</em> durante mi cursado en la universidad.
       </p>
-      <ul>
+      <ul class="list pa0">
         <li class="mt-4">
           Tapa de libro, ilustración xilográfica en blanco y negro, posteriormente coloreada de forma digital.
           <img
             src="~/assets/portfolio/tapa-libro-redhondinho.jpg"
           />
         </li>
+        <li>
+          Flyer para Juice Bar.
+          <img src="~/assets/portfolio/folleto-juice-bar.png" />
+        </li>
+
+        <li>
+          Menú de bar, con ilustraciones.
+          <img src="~/assets/portfolio/juice-bar.jpg" />
+        </li>
       </ul>
     </li>
-
-    <li>
-      Flyer para Juice Bar.
-      <img src="~/assets/portfolio/folleto-juice-bar.png" />
-    </li>
-
-    <li>
-      Menú de bar, con ilustraciones.
-      <img src="~/assets/portfolio/juice-bar.jpg" />
-    </li>
-    <p>
-      <router-link to="/" class="f4 link dark-red">Volver al inicio</router-link>
-    </p>
   </main>
 </template>
 
@@ -100,14 +92,8 @@ export default {
   },
   data() {
     return {
-      btnClass: "dib link bg-dark-red br-pill pv2 ph3 white sans-serif tc"
+      btnClass: "dib link br-pill pv1 ph2 bg-inverted-10 inverted-100"
     };
-  },
-  mounted() {
-    document.querySelector("html").style.backgroundColor = "white";
-  },
-  destroyed() {
-    document.querySelector("html").style.backgroundColor = "";
   }
 };
 </script>
@@ -118,7 +104,11 @@ export default {
   margin: 1rem auto;
 }
 a[target="_blank"]:after {
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='1rem' height='1rem' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round' class='css-i6dzq1'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
   margin: 0 3px 0 5px;
+}
+.light-mode a[target="_blank"]:after {
+  /* black version */
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='1rem' height='1rem' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round' class='css-i6dzq1'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
 }
 </style>

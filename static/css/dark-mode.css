@@ -4,7 +4,7 @@
   /*--mainColorRGB: */
 }
 
-.white-mode {
+.light-mode {
   --bgColor: white;
   --foregroundColorRGB: 0, 0, 0;
 }

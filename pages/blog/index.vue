@@ -1,24 +1,17 @@
 <template>
   <main class="container">
     <h2>Blog</h2>
-    <blog-list/>
-
-    <!-- To do: GDPR newsletter -->
+    <blog-list />
   </main>
 </template>
 
 <script>
-
-import Newsletter from '~/components/newsletter.vue';
-
-import BlogList from '~/components/blog/list.vue';
-
+import BlogList from "~/components/blog/list.vue";
 
 export default {
-  components: { Newsletter, BlogList },
+  components: { BlogList },
   head: {
-    title: 'Blog'
-  },
-  
+    title: "Blog"
+  }
 };
 </script>

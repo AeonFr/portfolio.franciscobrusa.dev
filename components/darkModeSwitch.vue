@@ -72,9 +72,9 @@ export default {
       }
 
       if (this.mode === "white") {
-        window.document.body.classList.add("white-mode");
+        window.document.body.classList.add("light-mode");
       } else {
-        window.document.body.classList.remove("white-mode");
+        window.document.body.classList.remove("light-mode");
       }
     }
   }

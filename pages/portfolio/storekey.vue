@@ -2,7 +2,7 @@
   <main class="container">
     <storekey-jumbotron />
 
-    <ul class="list pa0 f4">
+    <ul class="list pa0 f4 mt5">
       <li>100% Responsive</li>
       <li>
         <em>Front-end</em> en Vue.js
@@ -18,18 +18,23 @@
       y evitar envió de cartas por correo (tradicional).
     </p>
 
-    <p class="pa2 shadow-2">
-      <a href="https://storekey-demo.francisco-cano.com/app" target="_blank" rel="nofollow">Demo</a>
-      <br />Contraseña:
-      <code>password</code>
+    <p class="lh-copy mb4">
+      <a
+        href="https://storekey-demo.francisco-cano.com/app"
+        target="_blank"
+        rel="nofollow"
+        class="link main"
+      >
+        <b>Click para acceder al demo</b>
+      </a>
       <br />
       <span
-        class="f6 gray"
+        class="f6 inverted-60"
       >Nota: Algunas funciones, como la generación de PDFs, no están disponibles en la demo.</span>
     </p>
 
     <p>
-      <router-link to="/portfolio" class="f4 link dark-red">Volver al Portfolio</router-link>
+      <router-link to="/portfolio" class="f4 link main">Volver al Portfolio</router-link>
     </p>
   </main>
 </template>
@@ -42,12 +47,6 @@ export default {
   components: { StorekeyJumbotron },
   head: {
     title: 'Portfolio: Proyecto "storekey"'
-  },
-  mounted() {
-    document.querySelector("html").style.backgroundColor = "white";
-  },
-  destroyed() {
-    document.querySelector("html").style.backgroundColor = "";
   }
 };
 </script>

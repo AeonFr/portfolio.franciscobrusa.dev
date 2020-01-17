@@ -1,5 +1,5 @@
 <template>
-  <negate-container class="flex-ns items-start ph2 pl5-ns" v-once>
+  <negate-container class="flex-ns items-start ph1 pl4-ns" v-once>
     <div>
       <h1>Aplicación Web de gestión de clientes</h1>
       <p>Contabilidad, gestión de clientes y envío de notificaciones por e-mail.</p>
@@ -14,7 +14,7 @@
         class="mt2"
       >Demo</a>
     </div>
-    <img src="~/assets/portfolio/storekey.jpg" />
+    <img src="~/assets/portfolio/storekey.jpg" class="pl4" />
   </negate-container>
 </template>
 <script>
@@ -28,7 +28,7 @@ export default {
   components: { NegateContainer },
   data() {
     return {
-      btnClass: "dib link bg-dark-red br-pill pv2 ph3 white sans-serif tc"
+      btnClass: "dib link br-pill pv1 ph2 bg-inverted-10 inverted-100"
     };
   }
 };

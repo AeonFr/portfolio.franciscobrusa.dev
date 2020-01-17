@@ -16,7 +16,6 @@
 
 <script>
 import Icons from "~/components/icons.vue";
-import Newsletter from "~/components/newsletter.vue";
 import BlogList from "~/components/blog/list.vue";
 
 let jsonLd = {
@@ -36,7 +35,7 @@ let jsonLd = {
 };
 
 export default {
-  components: { Icons, Newsletter, BlogList },
+  components: { Icons, BlogList },
   head: {
     title: "Home",
     meta: [
