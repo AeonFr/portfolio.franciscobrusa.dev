@@ -5,7 +5,7 @@
       <blog-list />
     </section>
 
-    <hr />
+    <hr class="mb5" />
 
     <section>
       <h2>Social</h2>
