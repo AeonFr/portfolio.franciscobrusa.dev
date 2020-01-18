@@ -3,9 +3,12 @@
     <section v-if="posts.length">
       <ul class="list pa0 sans-serif">
         <li v-for="post in posts" :key="post.date">
-          <nuxt-link :to="post._path" class="flex-ns link mv2 pv2 hover-bg-inverted-10 inverted-70">
-            <div class="w-100 flex-grow-1" style="order: 2">{{ post.title }}</div>
-            <div class="w4-ns tc inverted-40" style="order: 1">{{ prettyDate(post.date) }}</div>
+          <nuxt-link
+            :to="post._path"
+            class="db link mv2 pv2 nl1 nr1 ph1 hover-bg-inverted-10 inverted-70"
+          >
+            <div class="w">{{ post.title }}</div>
+            <div class="mt2 f7 inverted-40">{{ prettyDate(post.date) }}</div>
           </nuxt-link>
         </li>
       </ul>
