@@ -17,7 +17,7 @@ fields:
   name: body
   label: body
   config:
-    wysiwyg: true
+    wysiwyg: false
     schema:
       format: markdown
     required: true
