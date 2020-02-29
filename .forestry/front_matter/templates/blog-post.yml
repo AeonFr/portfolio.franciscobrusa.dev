@@ -21,5 +21,3 @@ fields:
     schema:
       format: markdown
     required: true
-pages:
-- content/blog/posts/data-abstraction-and-declarative-uis.json
