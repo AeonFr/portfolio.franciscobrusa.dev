@@ -1,5 +1,5 @@
 <template>
-  <negate-container class="flex-ns items-start ph1 pl4-ns" v-once>
+  <negate-container class="flex-ns items-start ph4 pl4-ns" v-once>
     <div>
       <h1>Aplicación Web de gestión de clientes</h1>
       <p>Contabilidad, gestión de clientes y envío de notificaciones por e-mail.</p>

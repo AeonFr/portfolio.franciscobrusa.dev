@@ -1,18 +1,12 @@
 :root {
-  --bgColor: rgb(0, 24, 31);
-  --foregroundColorRGB: 255, 255, 255;
-  /*--mainColorRGB: */
-}
-
-.light-mode {
   --bgColor: white;
-  --foregroundColorRGB: 0, 0, 0;
+  --foregroundColorRGB: 10, 10, 10;
 }
 
 body {
-  background-color: rgb(0, 24, 31);
+  background-color: white;
   background-color: var(--bgColor);
-  color: white;
+  color: #111;
   color: rgba(var(--foregroundColorRGB), 0.9);
 }
 

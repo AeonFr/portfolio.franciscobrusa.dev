@@ -1,65 +1,74 @@
-var glob = require('glob');
-var path = require('path');
+var glob = require("glob");
+var path = require("path");
 
 // Enhance Nuxt's generate process by gathering all content files from Netifly CMS
 // automatically and match it to the path of your Nuxt routes.
 // The Nuxt routes are generate by Nuxt automatically based on the pages folder.
 var dynamicRoutes = getDynamicPaths({
-  '/blog': 'blog/posts/*.json'
+  "/blog": "blog/posts/*.json"
 });
-
 
 module.exports = {
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
-    title: '',
-    titleTemplate: '%s - Francisco Cano Brusa',
+    title: "",
+    titleTemplate: "%s - Francisco Brusa",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Mi sitio web personal. Blog sobre diseño. Portfolio.' },
-      { hid: 'og:description', name: 'og:description', content: 'Sitio web personal. Blog sobre diseño. Portfolio.' },
-      { hid: 'og:locale', name: 'og:locale', content: 'es_LA' },
-      { hid: 'og:type', name: 'og:type', content: 'website' },
-      { hid: 'og:url', name: 'og:url', content: 'https://www.francisco-cano.com/' },
-
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: "Portfolio Francisco Brusa."
+      },
+      {
+        hid: "og:description",
+        name: "og:description",
+        content: "Portfolio Francisco Brusa."
+      },
+      { hid: "og:locale", name: "og:locale", content: "es_LA" },
+      { hid: "og:type", name: "og:type", content: "website" },
+      {
+        hid: "og:url",
+        name: "og:url",
+        content: "https://portfolio.franciscobrusa.dev/"
+      }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/img/favicon-190x190.png' }
+      { rel: "icon", type: "image/x-icon", href: "/img/favicon-190x190.png" }
     ]
   },
   /*
-  ** Customize the progress bar color
-  */
-  loading: { color: '#3B8070' },
+   ** Customize the progress bar color
+   */
+  loading: { color: "#3B8070" },
   /*
-  ** Route config for pre-rendering
-  */
+   ** Route config for pre-rendering
+   */
   generate: {
     routes: dynamicRoutes
   },
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** Run ESLint on save
-    */
+     ** Run ESLint on save
+     */
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /(node_modules)/
-        })
+        });
       }
     }
-  },
-
-}
+  }
+};
 
 /**
  * Create an array of URLs from a list of files
@@ -70,8 +79,8 @@ function getDynamicPaths(urlFilepathTable) {
     ...Object.keys(urlFilepathTable).map(url => {
       var filepathGlob = urlFilepathTable[url];
       return glob
-        .sync(filepathGlob, { cwd: 'content' })
-        .map(filepath => `${url}/${path.basename(filepath, '.json')}`);
+        .sync(filepathGlob, { cwd: "content" })
+        .map(filepath => `${url}/${path.basename(filepath, ".json")}`);
     })
   );
 }

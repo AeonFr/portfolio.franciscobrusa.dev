@@ -1,8 +1,8 @@
 {
-  "name": "francisco-cano.com",
+  "name": "portfolio.franciscobrusa.dev",
   "version": "1.0.0",
   "description": "My personal website",
-  "author": "Francisco Cano Brusa",
+  "author": "Francisco Brusa",
   "private": true,
   "scripts": {
     "dev": "nuxt",
